@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WE ON LONG-DRIVE?!!!⋆˚꩜｡</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+  <style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* BACKGROUND SCENE */
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("car.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    .scene {
+      animation: popBounce 1s ease forwards;
+    }
+
+    @keyframes popBounce {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      70% {
+        transform: scale(0.95);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* COMMON BUTTON STYLE */
+    .btn {
+      position: absolute;   /* THIS MAKES IT MOVABLE */
+      padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 45px;
+      border: 7px double pink;
+      background: white;
+      color: #6a0dad;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: "Pixelify Sans", sans-serif;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* BACK BUTTON */
+    .back-btn {
+      top: 20px;
+      left: 20px;
+    }
+
+    /* NEXT BUTTON */
+    .confirm-btn {
+      bottom: 48px;
+      left: 480px;
+      padding: 6px;
+      font-size: 30px;
+    }
+    .next-btn
+    {
+      bottom: 48px;
+      left: 790px;
+      padding: 6px;
+      font-size: 30px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="scene">
+
+    <a href="picnic.html" class="btn back-btn">Back!</a>
+
+    <a href="CAR1.html" class="btn confirm-btn">YES ON LONG-DRIVE!</a>
+    <a href="beach.html" class="btn next-btn">NEXT PLACE!</a>
+
+
+  </div>
+</body>
+</html>

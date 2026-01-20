@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT'S SO NICE AND PEACEFUL༄.°</title>
+
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* BACKGROUND SCENE */
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("PICNIC1.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    .scene {
+      animation: popBounce 1s ease forwards;
+    }
+
+    @keyframes popBounce {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      70% {
+        transform: scale(0.95);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+     .btn {
+      position: absolute;   /* THIS MAKES IT MOVABLE */
+      padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 45px;
+      border: 7px double pink;
+      background: white;
+      color: #6a0dad;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: "Pixelify Sans", sans-serif;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* BACK BUTTON */
+    .back-btn {
+      top: 20px;
+      left: 20px;
+    }
+
+    /* NEXT BUTTON */
+    .confirm-btn {
+      bottom: 48px;
+      left: 500px;
+      padding: 6px;
+      font-size: 30px;
+    }
+    .next-btn
+    {
+      bottom: 48px;
+      left: 790px;
+      padding: 6px;
+      font-size: 30px;
+    }
+
+
+    .dialogue-box {
+      position: absolute;
+      padding: 8px;
+      font-size: 15px;
+      border-radius: 45px;
+      border: pink double 7px;
+      background: white;
+      color: #6a0dad;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      font-family: "Pixelify Sans", sans-serif;
+      margin-top: 378px;
+      width: 17%;
+      text-align: center;
+      margin-left:-280px;
+    }
+
+    .dialogue-box:hover {
+      transform: scale(1.1);
+    }
+
+    .left { left: 395px; }
+    .right { right: 299px;  top: -10px; }
+
+    .hidden { display: none; }
+
+    button {
+      background: white;
+      color: #6a0dad;
+      border-radius: 45px;
+      border: pink;
+      margin-top: 6px;
+      cursor: pointer;
+    }
+    a
+    {
+      text-decoration: none;
+    }
+    .skip
+    {
+       position: absolute;
+      padding: 8px;
+      font-size: 15px;
+      border-radius: 45px;
+      border: pink double 7px;
+      background: white;
+      color: #6a0dad;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      font-family: "Pixelify Sans", sans-serif;
+      margin-top: 600px;
+      width: 10%;
+      text-align: center;
+    }
+     .vira {
+      position: absolute;
+      height: 330px;
+      right: 35%;
+      bottom: 19.5%;
+    }
+      h3
+    {
+      position: absolute;
+      bottom: 7%;
+      right: 1%;
+      color: aliceblue;
+      font-weight: 10px;
+      background-color:rgba(1, 96, 22, 0.5)  ;
+      
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="scene">
+   <img id="outfit" class="vira">
+   <h3>CLICK ON 'CONTINUE'</h3>
+<a href="picnic.html" class="btn back-btn">Back!</a>
+  <div class="dialogue-box left" id="d1">
+    Me: Happy Birthdayyy
+    <br>
+    <button onclick="nextDialogue()">continue~</button>
+  </div>
+
+  <div class="dialogue-box right hidden" id="d2">
+    V: Thank you chadda
+    <br>
+    <button onclick="nextDialogue()">continue~</button>
+  </div>
+
+  <div class="dialogue-box left hidden" id="d3">
+       Me:There is so many surprises, You haven't unlocked yet
+    <br>
+    <button onclick="nextDialogue()">continue~</button>
+  </div>
+
+  <div class="dialogue-box right hidden" id="d4">
+    V: Really? How do I unlock it?
+    <br>
+    <button onclick="nextDialogue()">continue~</button>
+  </div>
+
+  <div class="dialogue-box left hidden" id="d5">
+    Me: Kiss? 😝
+    <br>
+    <button onclick="nextDialogue()">continue~</button>
+  </div>
+
+  <div class="dialogue-box right hidden" id="d6">
+    V: Freaky !
+    <br>
+    <button onclick="nextDialogue()">continue~</button>
+  </div>
+
+  <div class="dialogue-box left hidden" id="d7">
+    Me: Just kidding how about you touch the mic?<a href="music2.html" style="font-size: 25px;">🎤</a>
+  </div>
+<a class="skip" href="music2.html">SKIPP!!</a>
+</div>
+
+<script>
+  let current = 1;
+  const total = 7;
+
+  function nextDialogue() {
+    document.getElementById("d" + current).classList.add("hidden");
+    current++;
+    if (current <= total) {
+      document.getElementById("d" + current).classList.remove("hidden");
+    }
+  }
+   const selectedOutfit = localStorage.getItem("selectedOutfit");
+
+    if (selectedOutfit) {
+      document.getElementById("outfit").src = selectedOutfit;
+    }
+</script>
+
+</body>
+</html>

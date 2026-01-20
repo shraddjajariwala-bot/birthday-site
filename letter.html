@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Letter Reveal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Georgia", serif;
+        }
+
+        /* BACKGROUND */
+        body {
+            height: 100vh;
+            background: url("bg.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* ENVELOPE CONTAINER */
+        .envelope-container {
+            position: relative;
+            width: 420px;
+            cursor: pointer;
+        }
+
+        /* ENVELOPE IMAGE */
+        .envelope {
+            left: -20%;
+            width: 140%;
+            height: 390px;
+            z-index: 2;
+            position: absolute;
+            top: 20%;
+        }
+
+        /* LETTER */
+        .letter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100%);
+            width: 90%;
+            height: 260px;
+            background: #fffafc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.8s ease;
+            z-index: 1;
+            overflow-y: auto;
+        }
+
+        /* WHEN OPEN */
+        .envelope-container.open .letter {
+            transform: translateX(-50%) translateY(-10%);
+        }
+
+        /* LETTER TEXT */
+        .letter h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #b86b87;
+        }
+
+        .letter p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #555;
+        }
+         .btn {
+      position: absolute;   /* THIS MAKES IT MOVABLE */
+      padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 45px;
+      border: 7px double pink;
+      background: white;
+      color: #6a0dad;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: "Pixelify Sans", sans-serif;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* BACK BUTTON */
+    .back-btn {
+      top: 20px;
+      left: 7px;
+    }
+
+    /* NEXT BUTTON */
+    .confirm-btn {
+      bottom: 48px;
+      left: 500px;
+      padding: 6px;
+      font-size: 30px;
+    }
+    .next-btn
+    {
+      bottom: 48px;
+      right: 150px;
+      padding: 3px;
+      font-size: 16px;
+    }
+        
+    </style>
+</head>
+
+<body>
+<a href="music.html" class="btn back-btn">Back!</a>
+<a class="btn next-btn" href="opinion.html">NEXT!!!!</a>
+    <div class="envelope-container" onclick="toggleLetter()">
+       
+        <img src="envelope.png" class="envelope">
+         <div class="letter">
+
+        
+            <h2>Dear Bro (˶ᵔ ᵕ ᵔ˶)</h2>
+            <p><b>
+                Happy viraa day!! Ig for hundreds of times ✌︎㋡... This is my second letter for you.. One is physical and
+                the other is Digital (LOL) . I actually had so many things I wanted to write but couldn’t in the first
+                letter so im gonna tell u here !! ofc i have so many things to write about YOU and to YOU.
+                You’re literally getting spoiled by me.. Idk if your future partner is gonna do this all.. Am I setting
+                the bar high for my love?!! (*farts cutely🎀*)
+                <br> ꉂ(˵˃ ᗜ ˂˵)
+                As you sit with this final letter, I want to emphasize just how much you mean to me. You've been my
+                confident, and my greatest cheerleader. Every moment we've shared, every laugh, every tear, made us
+                together into something truly beautiful and unbreakable. Life will continue to throw its rocks , And you
+                don’t need to be hard on yourself Okay!? Sharing whatever you’re feeling was never Embarrising Vira
+                ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧ You can always come to me and say anything despite of overthinking and second
+                thought (just like i always do
+                <br>
+                 (╥﹏╥)) , I will never judge you! And remember, we're in this
+                TOGETHER
+                <br>(◕ヮ◕)人(◕ヮ◕). Whether you're tired, mad, worried, or celebrating, my love and support remain
+                constant. and I'm excited about all the adventures that lie ahead!
+                I'm glad that you are here for me and I'm for you! I know college is gonna make a bit different BUT BUT
+                I don't think it's gonna be worse than our high school! Remember how little we talked in our
+                highschool!! Ik we got this and we are not kiddos anymore, we understand each other times and we get
+                it.. Ik we don’t need to explain everything like before, We have come far and strong and I believe we
+                will even be better version throughout the years !! Ik your birthday is like other day FOR YOU but for
+                me it's special.. so this is very small thing I can do for you.. love you babe💋😝🫶🏻
+                </b>
+                <br><br>
+                — Yours Chadda
+            </p>
+        </div>
+        
+            
+        
+    </div>
+
+    <script>
+        function toggleLetter() {
+            document.querySelector(".envelope-container")
+                .classList.toggle("open");
+        }
+    </script>
+
+</body>
+
+</html>

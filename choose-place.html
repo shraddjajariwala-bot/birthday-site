@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Place 💜</title>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("dressing_bg.png");
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .me {
+      left: 310px;
+      top: 215px;
+      position: absolute;
+      /* FIXED SIZE */
+      width: 289px;
+      height: 459px;
+    }
+
+    .vira {
+      position: absolute;
+      width: 280px;
+      height: 430px;
+      left: 41.5%;
+      top: 187px;
+      transform: translateX(-50%);
+    }
+
+    /* CHARACTERS POP ANIMATION */
+    .me {
+      animation: popBounce 1s ease forwards;
+    }
+
+    @keyframes popBounce {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      70% {
+        transform: scale(0.95);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .vira {
+      animation: popBounce 1s ease forwards;
+    }
+
+    @keyframes popBounce {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      70% {
+        transform: scale(0.95);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .dialog {
+      animation: popBounce 1s ease forwards;
+    }
+
+    @keyframes popBounce {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      70% {
+        transform: scale(0.95);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #6a0dad;
+    }
+
+    a:hover {
+      color: palevioletred;
+    }
+
+    .goback {
+      padding: 8px;
+      font-size: 25px;
+      border-radius: 45px;
+      border: pink;
+      border-width: 7px;
+      border-style: double;
+      background: white;
+      color: #6a0dad;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      font-family: "Pixelify Sans", sans-serif;
+      font-style: normal;
+      margin-top: 8px;
+      width: 18%;
+      text-align: center;
+      margin-left: 8px;
+
+      .goback:hover {
+        transform: scale(1.1);
+      }
+
+    }
+
+    .place {
+      padding: 5px;
+      font-size: 25px;
+      border-radius: 45px;
+      border: pink;
+      border-width: 7px;
+      border-style: double;
+      background: white;
+      color: #4e117a;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      font-family: "Pixelify Sans", sans-serif;
+      font-style: normal;
+      margin-top: 550px;
+      width: 20%;
+      text-align: center;
+      margin-left: 610px;
+
+    }
+
+    .place:hover {
+      transform: scale(1.1);
+    }
+
+
+
+    .dialog {
+      left: 24%;
+      margin-top: 48px;
+      position: absolute;
+      /* FIXED SIZE */
+      width: 263px;
+      height: 209px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scene">
+    <div class="goback"><a href="1st_fit.html">I wanna change my fit!!</a></div>
+
+    <!-- Base character -->
+    <img src="me_cheer.png" class="me">
+
+    <!-- Outfit (will change dynamically) -->
+    <img id="outfit" class="vira">
+    <img src="dia10.png" class="dialog">
+    <div class="place"><a href="beach.html">Let's decide where to go!</a></div>
+
+ 
+  </div>
+
+  <script>
+    // STEP 1: Load selected outfit
+    const selectedOutfit = localStorage.getItem("selectedOutfit");
+
+    if (selectedOutfit) {
+      document.getElementById("outfit").src = selectedOutfit;
+    }
+
+  </script>
+
+</body>
+
+</html>

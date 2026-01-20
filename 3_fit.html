@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Vira 💜</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <!-- CSSSSSSSSSSSSSSSSSSSS -->
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .scene {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("dressing_bg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+
+        .me {
+            margin-left: 350px;
+            margin-top: 260px;
+            position: absolute;
+            /* FIXED SIZE */
+            width: 270px;
+            height: 450px;
+            /* FIXED POSITION */
+            /* bottom: 120px; */
+            /* stand on floor */
+            /* left: 50%; */
+            transform: translateX(-50%);
+            /* IMPORTANT */
+            pointer-events: none;
+        }
+
+        @media (max-width: 600px) {
+            .me {
+                width: 160px;
+            }
+        }
+
+        .vira {
+            left: 41.5%;
+            margin-top: 184px;
+            position: absolute;
+            /* FIXED SIZE */
+            width: 267px;
+            height: 434px;
+        }
+
+        .left-arow {
+            left: 30%;
+            margin-top: 300px;
+            position: absolute;
+            /* FIXED SIZE */
+            width: 120px;
+            height: 150px;
+            /* FIXED POSITION */
+            /* bottom: 120px; */
+            /* stand on floor */
+            /* left: 50%; */
+
+        }
+
+        .right-arow {
+            right: 30%;
+            margin-top: 317px;
+            position: absolute;
+            /* FIXED SIZE */
+            width: 120px;
+            height: 150px;
+            /* FIXED POSITION */
+            /* bottom: 120px; */
+            /* stand on floor */
+            /* left: 50%; */
+
+        }
+
+        .dialog {
+            left: 22%;
+            margin-top: 120px;
+            position: absolute;
+            /* FIXED SIZE */
+            width: 277px;
+            height: 200px;
+        }
+
+        .save {
+            padding: 12px;
+            font-size: 25px;
+            border-radius: 45px;
+            border: pink;
+            border-width: 7px;
+            border-style: double;
+            background: white;
+            color: #6a0dad;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-family: "Pixelify Sans", sans-serif;
+            font-style: normal;
+            margin-top: 600px;
+            width: 13%;
+            text-align: center;
+            margin-left: 652px;
+        }
+
+        .save:hover {
+            transform: scale(1.5);
+        }
+        a
+        {
+            text-decoration: none;
+        }
+        .home {
+
+            padding: 12px;
+            font-size: 25px;
+            border-radius: 45px;
+            border: pink;
+            border-width: 7px;
+            border-style: double;
+            background: white;
+            color: #6a0dad;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-family: "Pixelify Sans", sans-serif;
+            font-style: normal;
+            width: 13%;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scene">
+        <img src="me.png" class="me">
+        <img src="red_creameskirt.png" class="vira">
+        <a href="2_fit.html"><img src="left.png" class="left-arow"></a>
+        <a href="4_fit.html"> <img src="right.png" class="right-arow"></a>
+        <img src="dia4.png" class="dialog">
+      <div class="save" onclick="saveFit('red_creameskirt.png')">
+  I LOVE THIS FIT!
+</div>
+<a href="page2(popup).html" class="home"> ←go on homepage</a>
+</div>
+<script>
+function saveFit(outfitImage) {
+  localStorage.setItem("selectedOutfit", outfitImage);
+  window.location.href = "choose-place.html";
+}
+</script>
+
+</body>
+
+</html>
